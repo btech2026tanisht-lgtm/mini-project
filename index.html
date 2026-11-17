@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TYPING SPEED GAME</h1>
+        <p class="subtitle">Type the sentence as fast and accurately as you can!</p>
+        
+        <div id="sentence">The quick brown fox jumps over the lazy dog while an old, rusty clock chimes softly in the distance. Developing a smooth typing rhythm requires you to keep your wrists slightly elevated and your fingers resting gently on the home row keys. Do not rush to finish quickly; instead, focus entirely on hitting every letter, comma, and period with complete accuracy. As your muscle memory grows stronger, your speed will naturally increase without any extra effort.</div>
+        
+        <textarea id="typing-area" placeholder="Click 'Start Game' to begin..." disabled></textarea>
+        
+        <div class="controls">
+            <button id="start-button" onclick="startGame()">Start Game</button>
+            <button id="reset-button" onclick="resetGame()">Reset</button>
+        </div>
+
+        <div class="result">
+            <div class="stat-box">
+                <span class="stat-label">Time</span>
+                <p><span id="timer" class="stat-val">60</span>s</p>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">WPM</span>
+                <p><span id="wpm" class="stat-val">0</span></p>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Accuracy</span>
+                <p><span id="accuracy" class="stat-val">0</span>%</p>
+            </div>
+        </div>
+
+        <h3 id="message">Press Start Game to begin</h3>
+    </div>
+
+    <!-- Load JS at the bottom so the DOM elements exist when JS runs -->
+    <script src="react.js"></script>
+</body>
+</html>
